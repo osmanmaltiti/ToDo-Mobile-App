@@ -24,7 +24,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
         children: [
           const Text(
             "New Category",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           DropdownButton(
             value: category,

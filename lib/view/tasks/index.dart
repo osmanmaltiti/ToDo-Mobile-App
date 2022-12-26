@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/view/tasks/components/todo.component.dart';
+import 'package:todo_app/view/tasks/create-task.dart';
 
 class TaskPage extends StatefulWidget {
   const TaskPage({super.key});
@@ -106,7 +107,13 @@ class _TaskPageState extends State<TaskPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: ((context) => const CreateTask()),
+            ),
+          );
+        },
         backgroundColor: Colors.green[400],
         child: const Icon(Icons.add),
       ),
