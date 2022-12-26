@@ -107,6 +107,7 @@ class _TaskPageState extends State<TaskPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        backgroundColor: Colors.green[400],
         child: const Icon(Icons.add),
       ),
     );

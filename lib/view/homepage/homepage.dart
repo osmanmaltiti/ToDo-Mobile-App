@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/components/sidebar.dart';
 import 'package:todo_app/model/list-buttons.model.dart';
+import 'package:todo_app/view/homepage/components/bottom-sheet.dart';
 import 'package:todo_app/view/homepage/components/list-buttons.dart';
 
 class Homepage extends StatefulWidget {
@@ -84,7 +85,15 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+            builder: (BuildContext context) => const CustomBottomSheet(),
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );
